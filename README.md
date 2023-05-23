@@ -1,5 +1,5 @@
 # djangoSummer
-django project
+django project codes
 
 
-H2 - luotu app people, jossa voi lisätä kontakteja 
+H2_Muodillista - Luotu app people, jossa voi lisätä kontakteja. [Tarkempi selostus](https://github.com/LiljestromNadja/Django_course/blob/main/h2_Muotillista.md)
