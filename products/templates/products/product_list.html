@@ -1,0 +1,37 @@
+{% extends "products/base.html" %}
+
+
+{% block "content" %}
+	<h3>Products</h3>
+
+	<p>
+		<a href="product/add"> Add product </a>
+	</p>
+
+	{% for object in  object_list %}
+		
+		<p>	Product: 
+			<a href='product/{{ object.pk }}/edit'>
+			{{ object }} 
+			</a>
+			
+			Description: 
+			{{ object.description }}
+			Price:
+			{% if object.price %} <!--Jos olemassa -->
+			{{ object.price }}
+			{% endif %} 
+			
+			
+		</p>
+		
+	{% endfor %}
+{% endblock "content" %}
+
+
+
+
+
+
+
+

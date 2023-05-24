@@ -1,0 +1,22 @@
+
+{% extends "people/base.html" %}
+
+
+{% block "content" %}
+	<a href="/">Back to list</a>
+	<form method="post">
+		{% csrf_token %} 
+		{{form.as_p}}
+		<input type=submit value="Save changes">
+		{% if object  %}
+			<p><a href="/contact/{{ object.pk }}/delete">Delete</a>
+		{% endif  %}
+	</form>	
+{% endblock "content" %}
+
+
+
+
+
+
+
