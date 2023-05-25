@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',    
     'todo', #add apps here
     'people',
-    'products'
+    'products',
+    'elaimet',
+    'notes'
     
 ]
 

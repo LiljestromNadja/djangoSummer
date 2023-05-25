@@ -1,0 +1,34 @@
+{% extends "notes/base.html" %}
+
+
+{% block "content" %}
+  <h3>Heippalaput</h3>
+
+  <p>
+    <a href="note/add"> Add note </a>
+  </p>
+
+  {% for object in  object_list %}
+
+    <p>	Note subject: 
+      <b><a href='note/{{ object.pk }}/edit'>
+      {{ object.subject }} 
+      </a></b>      
+      <br>      
+      Publisher: 
+      <b>{{ object.person }} </b>
+	</p>
+	
+	<p>	
+      Message:
+      {{ object.message }}      
+        
+
+      Apartment: 
+      {{ object.person.apartment }}
+
+
+    </p>
+
+  {% endfor %}
+{% endblock "content" %}
