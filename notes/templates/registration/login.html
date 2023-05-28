@@ -1,4 +1,3 @@
-
 {% extends "notes/base.html" %}
 
 
@@ -7,9 +6,7 @@
   <form method="post">
     {% csrf_token %} 
     {{form.as_p}}
-    <input type=submit value="Save changes">
-    {% if object  %}
-      <p><a href="/note/{{ object.pk }}/delete">Delete</a>
-    {% endif  %}
+    <input type=submit value="Login">
   </form>	
 {% endblock "content" %}
+

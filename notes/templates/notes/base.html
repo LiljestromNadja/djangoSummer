@@ -6,8 +6,37 @@
     <meta name="viewport" content="width=device-width; initial-scale=1">
   </head>
   <body>
+  	<p>
+  		{% if user.username  %}
+  		Logged in with username: <b>{{ user }}</b>
+  		{% endif %}
+  		</br>
+  		<a href="/"> Home(base) </a> |
+  		<a href="/note/add"> Add note  </a> |   
+  		<a href="/listnotes"> List notes  </a> |    
+  		<a href="/listpersons"> List persons  </a> |  		
+  		<a href="/admin"> Admin  </a>|
+	  	
+	  	{% if user.username  %}
+	  	  	<a href="/logout"><b>Logout {{user}}</b> </a>
+	  	{% else %}
+	  		<a href="/register"> <b> Register <b> </a>
+	  	{% endif %}
+  	</p>
+  	</br>
+  	
+  	
+  	
+
+
+  	
    {% block "content" %}
      <h1>This is base.html in Heheeippalaput!</h1>
+     <p>	
+	     <a href="note/add"> Add note  </a>     
+	     <a href="listnotes"> List notes  </a>     
+	     <a href="listpersons"> List persons  </a>
+     </p>
    {% endblock "content" %}
   </body>
 </html> 
