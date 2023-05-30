@@ -15,6 +15,7 @@ class Note(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True, related_name="notes")
     owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True, related_name="notes")
 
+    
     def __str__(self):
         #return f" {self.subject} {self.person}"
     
